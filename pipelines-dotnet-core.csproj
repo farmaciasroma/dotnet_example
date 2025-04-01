@@ -6,6 +6,10 @@
     <RootNamespace>pipelines_dotnet_core</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include=".github\workflows\demo.yml" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
