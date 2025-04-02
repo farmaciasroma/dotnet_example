@@ -7,9 +7,8 @@ on: push
 jobs:
   example_job:
     runs-on: ubuntu-latest
-    environment: QA
     steps:
-      - run: echo ${{ vars.CON_DB }}
+      - run: echo $MY_VARIABLE
       - run: echo "siguiente" > archivo.txt
       - run: sleep 1
 
