@@ -10,9 +10,18 @@ env:
 jobs:
   example_job:
     runs-on: ubuntu-latest
+    env:
+      OTRO: otra
     steps:
-      - run: echo $MY_VARIABLE
+      - run: echo 'global $MY_VARIABLE'
+      - run: echo 'jobs $OTRO'
       - run: echo "siguiente" > archivo.txt
+      - name: "Step con variable"
+        run: echo "mas variable $MAS"
+        env:
+          MAS: SAM
+      - name: "Step con variable 2"
+        run: echo "mas variable $MAS"
       - run: sleep 1
 
   example_job2:
