@@ -7,7 +7,7 @@ on: push
 jobs:
   example_job:
     runs-on: ubuntu-latest
-    environment: DEV
+    environment: QA
     steps:
       - run: echo ${{ vars.CON_DB }}
       - run: echo "siguiente" > archivo.txt
