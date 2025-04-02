@@ -4,6 +4,9 @@ run-name: Workflow para entender el funcionamiento automatizado
 
 on: push
 
+env:
+  MY_VARIABLE: 'desde mi variable'
+
 jobs:
   example_job:
     runs-on: ubuntu-latest
