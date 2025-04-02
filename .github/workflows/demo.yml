@@ -13,8 +13,8 @@ jobs:
     env:
       OTRO: otra
     steps:
-      - run: echo 'global $MY_VARIABLE'
-      - run: echo 'jobs $OTRO'
+      - run: echo "global $MY_VARIABLE"
+      - run: echo "jobs $OTRO"
       - run: echo "siguiente" > archivo.txt
       - name: "Step con variable"
         run: echo "mas variable $MAS"
