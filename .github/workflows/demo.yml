@@ -22,6 +22,12 @@ jobs:
           MAS: SAM
       - name: "Step con variable 2"
         run: echo "mas variable $MAS"
+      - name: "save archivo.txt"
+        uses: actions/upload-artifact@v4
+        with:
+          name: version-compilada
+          path: archivo.txt
+          retention-days: 1
       - run: sleep 1
 
   example_job2:
