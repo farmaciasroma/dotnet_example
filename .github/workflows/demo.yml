@@ -18,13 +18,9 @@ jobs:
     steps:
       - run: echo "hola workflow desde job 2"
       - run: echo "d"
-
-  example_windows:
-    if: runner.os == 'Windows'
-    runs-on: ubuntu-20.04
-    steps:
-      - run: echo "hola workflow desde job 2"
-      - run: echo "d"
+      - name: condicion
+        if: runner.os == 'Windows'
+        run: echo "e"
 
   example_fail:
     if: ${{ always() }}
