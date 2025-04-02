@@ -16,6 +16,10 @@ jobs:
       - run: echo "global $MY_VARIABLE"
       - run: echo "jobs $OTRO"
       - run: echo "siguiente" > archivo.txt
+      - name: "cache"
+        uses: actions/cache@v4
+        with:
+          path: archivo.txt
       - name: "Step con variable"
         run: echo "mas variable $MAS"
         env:
